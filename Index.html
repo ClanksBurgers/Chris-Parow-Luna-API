@@ -10,6 +10,16 @@
 		<main class="container">
 			<h1>Chris Parow — Luna API</h1>
 			<p class="lead">API Project</p>
+
+			<nav class="site-nav" aria-label="Primary">
+				<button id="nav-images" class="nav-btn" aria-pressed="true">Images</button>
+				<button id="nav-breeds" class="nav-btn" aria-pressed="false">Breeds</button>
+			</nav>
+
+			<section id="results">
+				<p class="muted">Results will appear here. Open DevTools Console to see full responses.</p>
+				<ul id="results-list" aria-live="polite"></ul>
+			</section>
 		</main>
 		
 		<script src="JS/index.js" defer></script>
