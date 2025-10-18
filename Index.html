@@ -7,21 +7,46 @@
 		<link rel="stylesheet" href="CSS/index.css" />
 	</head>
 	<body>
-		<main class="container">
-			<h1>Chris Parow — Luna API</h1>
-			<p class="lead">API Project</p>
+		<!-- decorative starfield -->
+		<div class="starfield" aria-hidden="true">
+			<div class="stars"></div>
+			<div class="stars stars-2"></div>
+		</div>
 
+		<header class="site-header" role="banner">
+			<div class="logo" aria-hidden="true">
+				<!-- simple spaceship SVG -->
+				<svg width="96" height="32" viewBox="0 0 96 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect width="96" height="32" rx="6" fill="#050510" />
+					<g transform="translate(12,6)" fill="#FFD54A">
+						<path d="M0 8 L12 0 L24 8 L12 12 Z" />
+					</g>
+				</svg>
+			</div>
+			<div class="site-title">
+				<h1>Chris Parow — Luna API</h1>
+				<p class="lead">A small SWAPI demo with cinematic styling</p>
+			</div>
+		</header>
+
+		<main class="container">
 			<nav class="site-nav" aria-label="Primary">
-				<button id="nav-images" class="nav-btn" aria-pressed="true">Images</button>
-				<button id="nav-breeds" class="nav-btn" aria-pressed="false">Breeds</button>
+				<button id="nav-people" class="nav-btn" aria-pressed="true">People</button>
+				<button id="nav-planets" class="nav-btn" aria-pressed="false">Planets</button>
 			</nav>
 
 			<section id="results">
-				<p class="muted">Results will appear here. Open DevTools Console to see full responses.</p>
+				<p class="muted">Click a navigation button to load data from the API. Each click issues a fresh GET request.</p>
 				<ul id="results-list" aria-live="polite"></ul>
 			</section>
 		</main>
-		
+
+		<!-- Short static intro instead of crawl -->
+		<section class="intro" role="region" aria-label="Introduction">
+			<h2 class="intro-title">Luna API</h2>
+			<p class="intro-copy">Welcome — this demo fetches characters and planets from the Star Wars API (SWAPI). Use the People or Planets buttons to explore.</p>
+		</section>
+
 		<script src="JS/index.js" defer></script>
-        </body>
+	</body>
 </html>
